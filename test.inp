@@ -1,0 +1,43 @@
+# This is an input file for the merocyanine program using type method
+# To run the program, from the command line (Development Command Prompt) 
+# enter the program name giving the name of the input file as the first argument
+#
+# Any line starting with a '#' will be ignored
+#
+# Parameters
+task_title       g2x4z2n10t10     #Name of the run
+nmax           8        #number of chromophores
+es_zmax            2        #N, Z
+ct_state        .false.        #A, C
+vibmax            0       #maximum vibrational quanta allowed in a state
+sys_vibmax        10        #maximum vibrational quanta allowed in a system
+nz            10000.00d0        #Ion pair energy in cm-1
+tz            10000.00d0        #Intramolecule charge transfer in ecm-1
+nct            17300.d0    #charge transfer state energy
+tct            5050.d0        #intermolecular charge transfer
+lambda_n        0.00d0        #potential well shift of the neutral state
+lambda_z        1.00d0        #potential well shift of the zwitter state
+lambda_a        0.8627d0        #potential well shift of the antion state
+lambda_c        0.8627d0        #potential well shift of the cation state
+abs_lw            200.d0        #Absorption linewidth in cm-1
+spec_step        5000        #number of spectrum points (res.)
+spec_start_ab       0000.d0        #first abs spec point in cm-1
+spec_end_ab        35000.d0    #last abs spec point in cm-1
+spec_start_pl        000.d0    #first pl spec point in cm-1
+spec_end_pl        40000.d0    #last pl spec point in cm-1
+calc_pl            .true.        #Calculate the pl spectrum
+lorentzian        .false.        #set lineshape to gaussian to gaussian if false
+periodic        .false.        #false when open boundary condition
+geometry        2               # 1 for parallel, 2 for antiparallel 
+x_offset        4.00d0        #offset in the x axis
+y_offset        0.00d0        #offset in the y axis
+z_offset        2.00d0        #offset in the z axis
+armlength        5.000d0        #distance between the donor and acceptor
+#agg_angle        0.00d0        #slip angle between aggregate
+dielectric        1.00d0        #the dielectric constant
+hw            1400.d0        #vibrational energy
+no_frenkel        .false.        #no frenkel coupling if true
+nearest_neighbor    .false.        #calc from the nearest neighbor molecules if true
+#dynamics
+t_max       3000        #maximum time 
+#EOF

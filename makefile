@@ -7,12 +7,11 @@ mySRCFILES = abs_osc.F95 evec_out.F95 normalization_pl.F95 \
 		build_molecule_geometry.F95 index_mon_state.F95 pl_out.F95 \
 		calc_coupling.F95 index_sys_state.F95 pl_spec.F95 \
 		character_function.F95 kount_out.F95 read_para_file.F95 \
-		common_variables.F95 merocyanine.F95 sign_fxn.F95 \
+		common_variables.F95 merocyanine.F95 \
 		delta_ES.F95 delta_NZ.F95 volap.F95 pl.F95\
 		dsyev_diagonalize.F95 normalization_ab.F95 \
         get_population.F95 get_current_state.F95 \
         get_alpha_coeff.F95 get_coherence.F95 data_collection.F95
-        # finish_dislin.F95 setup_dislin.F95
 myOBJFILES = $(mySRCFILES:.F95=.o)
 myDEP = common_variables.mod
 myEXE = merocyanine.exe
@@ -20,7 +19,6 @@ vpath %.o ${myOBJDIR}
 vpath %.mod ${myOBJDIR}
 vpath %.F95 ${mySRCDIR}
 FLINKER = gfortran
-# LIBS = -L/path/to/libs -llapack -lblas -ldislin -lXt -lm
 LIBS = -L/path/to/libs -llapack -lblas
 
 ${myEXE} : ${myOBJFILES} ${myDEP:.mod=.o}
